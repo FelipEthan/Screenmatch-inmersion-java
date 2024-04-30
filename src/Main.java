@@ -14,6 +14,7 @@ public class Main {
                 me encanto mucho la pelicula.""";
         double mediaEvaluacion = (4.5 + 4.8 + 3) / 3;
         double mediaMatrix = 0;
+        int contador = 0;
 
 
         //Para imprimir en pantalla
@@ -29,13 +30,15 @@ public class Main {
         }else {
             System.out.println("Pelicula retro fea");
     }
-        for (int i = 0; i < 3; i++) {
-            Scanner teclado = new Scanner(System.in);
-            System.out.println("Ingresa la nota que le das a Matrix");
+
+        Scanner teclado = new Scanner(System.in);
+        while (contador < 3){
+            contador++;
+            System.out.println("Ingresa la nota que deseas aplicarle a la pelicula " + nombre);
             double notaMatrix = teclado.nextDouble();
             mediaMatrix += notaMatrix;
         }
-        System.out.println("La media de la pelicula Matrix calculada es: " + mediaMatrix / 3);
-}
+        System.out.println("El promedio de calificación es de " + mediaMatrix/3);
 
 }
+    }
