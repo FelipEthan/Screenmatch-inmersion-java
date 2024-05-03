@@ -8,6 +8,7 @@ public class Titulo{
     private double evaluacion;
     private String sinopsis;
 
+
     public String getNombre() {
         return nombre;
     }
@@ -53,6 +54,10 @@ public class Titulo{
         System.out.println("Nombre del titulo es: " + getNombre());
         System.out.println("Su fecha de lanzamiento fue: " + getFechaDeLanzamiento());
         System.out.println("Tiempo de duración es de: " + getTiempoDeDuracion() + " minutos");
+
+    }
+    public void muestraDuracionTotal(){
+        System.out.println("El tiempo total para ver tu programa es de: " + getTiempoDeDuracion() + " minutos");
 
     }
 }

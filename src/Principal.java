@@ -1,4 +1,6 @@
+import modelos.Calculadora;
 import modelos.Pelicula;
+import modelos.Serie;
 
 import java.util.Scanner;
 
@@ -11,6 +13,7 @@ public class Principal {
                     BIENVENIDO A SCREENMATCH
                     1) Registrar nueva pelicula
                     2) Registrar nueva serie
+                    3) Calculadora de tiempos (Serie)
                     9) Salir
                     Digita una opción
                     """;
@@ -19,20 +22,16 @@ public class Principal {
             teclado.nextLine();
             switch (opcion){
                 case 1:
-                    System.out.println("Ingrese el nombre de la pelicula");
-                    String nombre = teclado.nextLine();
-                    System.out.println("Ingrese el año de lanzamiento de la pelicula");
-                    int fechaDeLanzamiento = teclado.nextInt();
-                    teclado.nextLine();
-                    System.out.println("Ingrese la duracion de minutos de la pelicula");
-                    int duracionEnMinutos = teclado.nextInt();
-                    teclado.nextLine();
-
-                    Pelicula peliculaUsuario = new Pelicula();
-                    peliculaUsuario.setNombre(nombre);
-                    peliculaUsuario.setFechaDeLanzamiento(fechaDeLanzamiento);
-                    peliculaUsuario.setTiempoDeDuracion(duracionEnMinutos);
-                    peliculaUsuario.muestraFichaTecnica();
+                     Pelicula pelicula = new Pelicula();
+                     pelicula.crearPelicula();
+                    break;
+                case 2:
+                    Serie serie = new Serie();
+                    serie.crearSerie();
+                    break;
+                case 3:
+                    Calculadora calculadora = new Calculadora();
+                    calculadora.calcularSerie();
                     break;
                 case 9:
                     System.out.println("Saliendo del programa");
