@@ -1,44 +1,36 @@
-import java.util.Scanner;
+import modelos.Pelicula;
+import modelos.Serie;
+
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Bienvenido");
+        Principal principal = new Principal();
+        principal.muestraElMenu();
 
-        //Declaración de variables
-        int fechaDeLanzamiento = 2015;
-        double evaluacion = 4.5;
-        boolean incluidoEnElPlan = true;
-        String nombre = "Matrix";
-        String sinopsis = """
-                Matrix la mejor pelicula del fin del milenio
-                me encanto mucho la pelicula.""";
-        double mediaEvaluacion = (4.5 + 4.8 + 3) / 3;
-        double mediaMatrix = 0;
-        int contador = 0;
+        /*
+        System.out.println("*********************************");
+        System.out.println("Bienvenido a mi sistema de Peliculas");
 
+        Pelicula matrix = new Pelicula();
+        matrix.setNombre("Matrix");
+        matrix.setTiempoDeDuracion(120);
+        matrix.setFechaDeLanzamiento(1999);
+        matrix.muestraFichaTecnica();
+        System.out.println("*********************************");
+        Pelicula spider = new Pelicula();
+        spider.setNombre("Spiderman 2");
+        spider.setTiempoDeDuracion(140);
+        spider.setFechaDeLanzamiento(2023);
+        spider.muestraFichaTecnica();
+        System.out.println("*********************************");
+        Serie juegoDeTronos = new Serie();
+        juegoDeTronos.setNombre("Juego De Tronos");
+        juegoDeTronos.setFechaDeLanzamiento(2020);
+        juegoDeTronos.setTemporadas(10);
+        juegoDeTronos.setEpisodioPorTemporada(21);
+        juegoDeTronos.setDuracionEnMinutosPorEpisodio(30);
+        juegoDeTronos.muestraFichaTecnica();
 
-        //Para imprimir en pantalla
-        System.out.println("El nombre de la pelicula es: "+ nombre);
-        System.out.println("Breve sinopsis: " + sinopsis);
-        System.out.println("Su fecha de lanzamiento fue: " + fechaDeLanzamiento);
-        System.out.println("Su calificación es de: " + evaluacion);
-        System.out.println("Esta incluido en tu plan? : " + incluidoEnElPlan);
-        System.out.println("Su promedio de calificación es de: " + mediaEvaluacion);
-
-        if (fechaDeLanzamiento >= 1999){
-            System.out.println("Pelicula popular del momento");
-        }else {
-            System.out.println("Pelicula retro fea");
+*/
     }
-
-        Scanner teclado = new Scanner(System.in);
-        while (contador < 3){
-            contador++;
-            System.out.println("Ingresa la nota que deseas aplicarle a la pelicula " + nombre);
-            double notaMatrix = teclado.nextDouble();
-            mediaMatrix += notaMatrix;
-        }
-        System.out.println("El promedio de calificación es de " + mediaMatrix/3);
-
-}
     }
